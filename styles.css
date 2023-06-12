@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+body {
+  background-color: hsl(180, 52%, 96%);
+}
+
+.bg-top {
+  background-image: url('images/bg-header-mobile.svg');
+  height: 150px;
+  background-repeat: no-repeat;
+  background-color: hsl(180, 29%, 50%);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.with-filter {
+  top: -40px;
+}
+
+.no-filter {
+  top: 50px;
+}
+
+.filter {
+  display: none;
+  background-color: white;
+  width: 326px;
+  /*display: grid;*/
+  grid-template-columns: 88% 12%;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.filter .elements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.filter .elements .element {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.filter .elements .element .content{
+  height: 32px;
+  padding: 10px;
+  padding-top: 12px;
+  background-color: hsl(180, 31%, 95%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 16px;
+  color:hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.filter .elements .element .close {
+  background-image: url('images/icon-remove.svg');
+  background-color: hsl(180, 29%, 50%);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  width: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.filter .elements .element .close:hover {
+  background-color:hsl(180, 14%, 20%);
+  cursor: pointer;
+}
+
+.filter .clear {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: hsl(180, 8%, 52%);
+  font-weight: 700;
+}
+
+.filter .clear:hover {
+  cursor: pointer;
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
+}
+
+.card {
+  width: 326px;
+  height: 260px;
+  position: relative;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 120px 110px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.card .logo {
+  position: absolute;
+  left: 22px;
+  top: -26px;
+}
+
+.card .logo img {
+  width: 52px;
+  height: 52px;
+}
+
+.card .info {
+  display: grid;
+  grid-template-rows: 55px 30px 1fr;
+  border-bottom: 1px solid hsl(180, 8%, 52%);
+}
+
+.card .info .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card .info .title .name{
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  margin-right: 25px;
+}
+
+.card .info .title .new {
+  display: flex;
+  align-items: center;
+  background-color: hsl(180, 29%, 50%);
+  height: 25px;
+  width: 50px;
+  border-radius: 12px;
+  color: white;
+  padding-left: 8px;
+  padding-top: 3px;
+  margin-right: 10px;
+}
+
+.card .info .title .featured {
+  display: flex;
+  align-items: center;
+  background-color: hsl(180, 14%, 20%);
+  height: 25px;
+  width: 80px;
+  border-radius: 12px;
+  color: white;
+  padding-left: 8px;
+  padding-top: 3px;
+  margin-right: 10px;
+}
+
+.card .info .position {
+  color: hsl(180, 14%, 20%);
+  font-weight: 700;
+}
+
+.card .info .position:hover {
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+
+.card .info .date {
+  color: hsl(180, 8%, 52%);
+}
+
+.card .abilities {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  width: 100%;
+}
+
+.card .abilities .ability {
+  height: 32px;
+  margin-right: 12px;
+  padding: 10px;
+  padding-top: 12px;
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+}
+
+.card .abilities .ability:hover {
+  background-color: hsl(180, 29%, 50%);
+  cursor: pointer;
+  color:white;
+}
+
+@media screen and (min-width:1200px){
+  .bg-top {
+    background-image: url('images/bg-header-desktop.svg');
+  }
+  .filter {
+    width: 1110px;
+    grid-template-columns: 95% 5%;
+  }
+  .card {
+    width: 1110px;
+    height: 154px;
+    grid-template-rows:1fr;
+    grid-template-columns: 420px 1fr;
+  }
+  .card .logo {
+    left: 34px;
+    top: 32px;
+  }
+  .card .logo img {
+    width: 90px;
+    height: 90px;
+  }
+  .card .info {
+    margin-left: 140px;
+    border-bottom: none;
+    grid-template-rows: 50px 1fr 1fr;
+  }
+  .card .info .title .name {
+    font-size: 18px;
+  }
+  .card .info .position {
+    font-size: 22px;
+  }
+  .card .info .date{
+    font-size: 18px;
+  }
+  .card .abilities {
+    justify-content: end;
+    padding-top: 0px;
+    align-items: center;
+  }
+}
